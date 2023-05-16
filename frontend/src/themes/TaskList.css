@@ -1,0 +1,12 @@
+.progressBar {
+    width: 25vw;
+    padding-top: 1vh;
+}
+
+.text {
+    font-size: calc(0.81em + 0.39vw);
+}
+
+.block {
+    display: inherit;
+}

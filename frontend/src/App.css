@@ -1,0 +1,7 @@
+.content{
+    width:80%;
+    position:absolute;
+    margin-left: 10%;
+    top:100px;
+    z-index: 1;
+}

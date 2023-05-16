@@ -1,0 +1,73 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.switch {
+    position: relative;
+    width: 7.5rem;
+    overflow: hidden;
+    height: 5.5rem;
+}
+
+.switch input {
+    cursor: pointer;
+}
+
+.background {
+    position: relative;
+    z-index: 1;
+    width: 7.5rem;
+    height: 4rem;
+    border-radius: 2.5rem;
+    border: 0.25rem solid gray;
+    background: black;
+    transition: all 0.3s;
+}
+
+.bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: black;
+    transition: 0.75rem all ease;
+}
+
+.switch input:checked ~ .bg {
+    background: white;
+}
+
+.sun-moon {
+    z-index: 2;
+    position: absolute;
+    height: 3rem;
+    width: 3rem;
+    display: inline-block;
+    left: 0;
+    background: #FFFDF2;
+    margin: 0.5rem;
+    border-radius: 50%;
+    border: 0.25rem solid wheat;
+    transition: all .5s ease;
+}
+
+.switch input:checked ~ .sun-moon {
+    left: calc(100% - 4rem);
+    background: rgb(240, 59, 4);
+    border-color: white;
+    transform: rotate(-25deg);
+}
+
+.switch input:checked ~ .background {
+    border: 0.25rem solid rgb(240, 168, 168);
+    background: linear-gradient(to right, red 0%, orange 100%);
+
+}
